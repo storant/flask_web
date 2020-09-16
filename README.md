@@ -1,1 +1,1 @@
-this is a terrible website which shouldnt be used
+# starter readme
