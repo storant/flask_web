@@ -2,6 +2,8 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 from progs import aggregator
 from progs.aggregator import curr_time, choice_pass
 from progs.customenter import get_balance, get_number
+from progs.util import convert_number
+
 app = Flask(__name__,template_folder='templates')
 
 
@@ -21,7 +23,12 @@ def sending_nexmo():
     num = request.form['phone']
     text = request.form['text']
     choice = request.form['choice']
+    
+    num = convert_number(num)
+    
     aggregator.choice_help(num,text,choice)
+
+
     return render_template('pass_nexmo.html',number=num,choice=choice_pass(choice),text_sent=text)
 '''
 @app.route('/pass_nexmo')
