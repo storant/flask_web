@@ -14,7 +14,7 @@ coll = db[coll_db]
 
 
 #("date","message-id","from","to","body","price","remaining_balance") 
-
+#hello
 
 def table_load(time,m_id,fr,to,body,price,remaining_balance):
     dic = {"time":time,"message-id":m_id,"from":fr,"to":to,'body':body,'price':price,'remaining-balance':remaining_balance}
