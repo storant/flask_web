@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>
+            Home Page
+        </title>
+
+        <style>
+            body {
+                text-align:center
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2>
+            WSL Flask
+        </h2>
+
+        <div class='form'>
+            <form method='POST'>
+                <label for='username'>Username:</label><br>
+                <input type='text' id='username' name='username' value='{{request.form.username}}'><br>
+
+            
+
+                <label for='password'>Password:</label><br>
+                <input type='text' id='password' name='password' value='{{request.form.password}}'><br>
+                
+                <br>
+
+                <input type='submit' value='login'>
+            </form>
+        
+
+        {% if one %}
+        <p class="one">one: {{ one }}
+         {% endif %}
+        <br>
+        {% if two %}
+        <p class="two">two: {{ two }}
+         {% endif %}               
+
+        <p><a href="/" >
+            Back home
+        </a></p>
+
+
+    </body>
+</html>

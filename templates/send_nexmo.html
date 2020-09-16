@@ -1,0 +1,59 @@
+<html>
+
+    <head>
+        <title>
+            Send Nexmo
+        </title>
+        
+        <style>
+            body {
+                text-align:center
+            }
+        </style>
+        
+    </head>
+
+    <body>
+        <h2>
+            Send a Nexmo!
+        </h2>
+
+        <pre>
+Instrutions on how to use this crap.
+1) Enter a phone number, format: 1XXXXXXXXXX
+2) Choose what you want to do
+3) Enter a message, even if its not necessary
+        </pre>
+
+        <!--
+        {% if balance %}
+        <p class="balance"><strong>balance:  {{ balance }} </strong> </p>
+        {% endif %}-->
+        <p class="time"><strong>time:  {{ time }} </strong> </p>
+        <p class="balance"><strong>balance:  {{ balance }} </strong> </p>
+        <p class="number"><strong>sending number:  {{ number }} </strong> </p>
+
+        <form method='POST'>
+            <label for='phone'>Phone Number:</label><br>
+            <input type='text' id='phone' name='phone'><br>
+
+            <label for='text'>Choice:</label><br>
+            <select id='choice' name='choice'>
+            <option value='0'>Call</option>
+            <option value='1'>Text</option>
+            <option value='2'>Rickroll</option>
+            </select><br>
+
+            <label for='text'>Text:</label><br>
+            <input type='text' id='text' name='text'><br>
+            
+            <br><br>
+
+            <input type='submit' value='submit'>
+        </form>
+
+        <p><a href="/">Back to Home</a></p>
+
+
+    </body>
+</html>

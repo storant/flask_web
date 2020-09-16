@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Login page</title>
+    
+        <style>
+            body {
+                text-align:center
+            }
+        </style>
+
+    </head>
+        
+    <body>
+
+        <p style='font-size: 200%;'> welcome</p>
+        
+        
+
+        <div class='form'>
+            <form method='POST'>
+                <label for='username'>Username:</label><br>
+                <input type='text' id='username' name='username' value='{{request.form.username}}'><br>
+
+            
+
+                <label for='password'>Password:</label><br>
+                <input type='text' id='password' name='password' value='{{request.form.password}}'><br>
+                
+                <br>
+
+                <input type='submit' value='login'>
+            </form>
+            <!-- idk what this even does?-->
+            {% if error %}
+            <p class="error"><strong>Error:</strong> {{ error }}
+             {% endif %}
+        </div>
+        
+    </body>
+
+
+
+</html>
